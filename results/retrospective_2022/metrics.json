@@ -1,0 +1,78 @@
+{
+  "logistic": {
+    "n_decisions": 364,
+    "accuracy": 0.46153846153846156,
+    "balanced_accuracy": 0.4728372655777375,
+    "macro_f1": 0.42970423661071144,
+    "roc_auc": 0.4585904416212946,
+    "always_up_accuracy": 0.47802197802197804,
+    "trade_coverage": 0.12362637362637363,
+    "selected_accuracy": 0.5111111111111111,
+    "selected_always_up_accuracy": 0.5555555555555556,
+    "cost_0bps_per_leg": {
+      "total_return": -0.006120659530954975,
+      "max_drawdown": -0.28725866027726255,
+      "sharpe_hourly_annualized": 0.12538861391849737,
+      "sortino_hourly_annualized": 0.1809059341559701
+    },
+    "cost_7bps_per_leg": {
+      "total_return": -0.06690788619385302,
+      "max_drawdown": -0.3022786977733122,
+      "sharpe_hourly_annualized": -0.08961845001730827,
+      "sortino_hourly_annualized": -0.12891505294270156
+    },
+    "cost_15bps_per_leg": {
+      "total_return": -0.13193433353301687,
+      "max_drawdown": -0.31908244531000773,
+      "sharpe_hourly_annualized": -0.3343875325920687,
+      "sortino_hourly_annualized": -0.4792524923478406
+    }
+  },
+  "hist_gradient_boosting": {
+    "n_decisions": 364,
+    "accuracy": 0.47527472527472525,
+    "balanced_accuracy": 0.4838173018753781,
+    "macro_f1": 0.459070856707151,
+    "roc_auc": 0.47158197217180886,
+    "always_up_accuracy": 0.47802197802197804,
+    "trade_coverage": 0.3269230769230769,
+    "selected_accuracy": 0.4789915966386555,
+    "selected_always_up_accuracy": 0.47058823529411764,
+    "cost_0bps_per_leg": {
+      "total_return": -0.44325248876441825,
+      "max_drawdown": -0.49152359103802035,
+      "sharpe_hourly_annualized": -1.1606102898702635,
+      "sortino_hourly_annualized": -1.5989843723372126
+    },
+    "cost_7bps_per_leg": {
+      "total_return": -0.528980372940346,
+      "max_drawdown": -0.5557788552935312,
+      "sharpe_hourly_annualized": -1.5495871439992879,
+      "sortino_hourly_annualized": -2.1268349296652214
+    },
+    "cost_15bps_per_leg": {
+      "total_return": -0.6110262376108212,
+      "max_drawdown": -0.6213662508918403,
+      "sharpe_hourly_annualized": -1.9904267586775555,
+      "sortino_hourly_annualized": -2.719094047473135
+    }
+  },
+  "buy_and_hold_7bps": {
+    "total_return": -0.6467912570797119,
+    "max_drawdown": -0.674385451787133,
+    "sharpe_hourly_annualized": -1.3151469984774715,
+    "sortino_hourly_annualized": -1.8327391830312572
+  },
+  "cash": {
+    "total_return": 0.0,
+    "max_drawdown": 0.0,
+    "sharpe_hourly_annualized": null,
+    "sortino_hourly_annualized": null
+  },
+  "24h_momentum_7bps": {
+    "total_return": -0.548142789008035,
+    "max_drawdown": -0.6868556049348811,
+    "sharpe_hourly_annualized": -0.9303968335107905,
+    "sortino_hourly_annualized": -1.3052413125144462
+  }
+}

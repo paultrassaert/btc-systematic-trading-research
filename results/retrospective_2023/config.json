@@ -1,0 +1,19 @@
+{
+  "csv": "btc_hourly.csv",
+  "start": "2023-01-01",
+  "end": "2023-12-31 23:00:00",
+  "horizon": 24,
+  "out": "retrospective_2023",
+  "data_sha256": "e9081c92a48c5ea558155914b3347325c0c7c049297e62815ce415c9155f6ecb",
+  "data_rows": 54496,
+  "data_first_bar": "2018-01-01 01:00:00",
+  "data_last_bar": "2024-03-20 16:00:00",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.8.0",
+  "confidence": 0.55,
+  "fee_bps_per_leg": 5,
+  "slippage_bps_per_leg": 2,
+  "status": "retrospective research; original 2021 period was already inspected"
+}

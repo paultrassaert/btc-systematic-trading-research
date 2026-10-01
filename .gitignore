@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.env
+.env.*
+data/*
+!data/README.md
+results/my_*/
+results/run/
+.DS_Store
