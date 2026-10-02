@@ -22,4 +22,8 @@ These are illustrative total one-way cost assumptions. Funding, borrowing, liqui
 
 ![2021 equity](retrospective_2021/equity.png)
 
+![2022 equity](retrospective_2022/equity.png)
+
+![2023 equity](retrospective_2023/equity.png)
+
 Machine-readable metrics, predictions, hourly account values, fitting audit records and data hashes accompany every run.

@@ -1,0 +1,95 @@
+{
+  "source_notebook": "Projet_TRASSAERT_LEBEL_LESAGE_DHERISSART (1).ipynb",
+  "figures": [
+    {
+      "cell": 17,
+      "figure": 1,
+      "path": "assets/original/cell-17-figure-1.png",
+      "caption": "HMM regimes over time"
+    },
+    {
+      "cell": 19,
+      "figure": 1,
+      "path": "assets/original/cell-19-figure-1.png",
+      "caption": "Forward returns by HMM regime"
+    },
+    {
+      "cell": 20,
+      "figure": 1,
+      "path": "assets/original/cell-20-figure-1.png",
+      "caption": "Feature correlations"
+    },
+    {
+      "cell": 23,
+      "figure": 1,
+      "path": "assets/original/cell-23-figure-1.png",
+      "caption": "Trend-scanning labels and selected horizons"
+    },
+    {
+      "cell": 49,
+      "figure": 1,
+      "path": "assets/original/cell-49-figure-1.png",
+      "caption": "Feature importance by gain"
+    },
+    {
+      "cell": 52,
+      "figure": 1,
+      "path": "assets/original/cell-52-figure-1.png",
+      "caption": "Correlation clusters and dendrogram"
+    },
+    {
+      "cell": 53,
+      "figure": 1,
+      "path": "assets/original/cell-53-figure-1.png",
+      "caption": "Clustered feature importance"
+    },
+    {
+      "cell": 55,
+      "figure": 1,
+      "path": "assets/original/cell-55-figure-1.png",
+      "caption": "Permutation feature importance"
+    },
+    {
+      "cell": 56,
+      "figure": 1,
+      "path": "assets/original/cell-56-figure-1.png",
+      "caption": "Gain versus permutation importance"
+    },
+    {
+      "cell": 58,
+      "figure": 1,
+      "path": "assets/original/cell-58-figure-1.png",
+      "caption": "SHAP summary"
+    },
+    {
+      "cell": 62,
+      "figure": 1,
+      "path": "assets/original/cell-62-figure-1.png",
+      "caption": "Confusion matrices"
+    },
+    {
+      "cell": 63,
+      "figure": 1,
+      "path": "assets/original/cell-63-figure-1.png",
+      "caption": "ROC and precision-recall curves"
+    },
+    {
+      "cell": 64,
+      "figure": 1,
+      "path": "assets/original/cell-64-figure-1.png",
+      "caption": "Directional signals and prediction probabilities"
+    },
+    {
+      "cell": 67,
+      "figure": 1,
+      "path": "assets/original/cell-67-figure-1.png",
+      "caption": "Original backtest: chart 1"
+    },
+    {
+      "cell": 67,
+      "figure": 2,
+      "path": "assets/original/cell-67-figure-2.png",
+      "caption": "Original backtest: chart 2"
+    }
+  ]
+}

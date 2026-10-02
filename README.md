@@ -6,11 +6,87 @@ An hourly-BTC machine-learning study, followed by an audit and a reproducible ca
 
 ## Original study and authorship
 
-Original coursework: **Paul Trassaert, Lebel, Lesage and Dherissart**, IMT Atlantique, 2026. Coauthor first names were not present in the supplied filename and are not guessed here. Course context: [Machine Learning and Finance](https://hm-ai.github.io/IMT_ML_and_Finance/).
+Original coursework: **Paul Trassaert, Raphael Lebel, Thomas Lesage and Alexandre d’Hérissart**, IMT Atlantique, 2026.  Course context: [Machine Learning and Finance](https://hm-ai.github.io/IMT_ML_and_Finance/).
 
 The original work explored 46 features, a three-state Gaussian HMM, trend-scanning labels, XGBoost/Optuna, Random Forest meta-labelling and expanding-window prediction. Its archived 2021 result was **−68.2% before costs**, versus **+48.4%** for its own benchmark interval. This repository does not relabel that result as profitable.
 
 The `archive/` notebook preserves student code with outputs and external setup/template material removed. It is explicitly superseded: undefined meta-labelling variables and other issues prevent a reliable fresh-kernel execution. The corrected reference uses `research.py` and `run.py`. It is a methodological rewrite, **not an exact reproduction or isolated ablation of the original XGBoost strategy**. The audit and implementation were prepared with AI assistance and should be understood and reviewed by the authors before interview use.
+
+## Original figures and analysis
+
+Read [the complete original analysis](docs/original-analysis.md) for the development choices, interpretations and conclusions, with all saved charts in notebook order. The captions below refer to the original experiment; current methodological qualifications are recorded in [AUDIT.md](AUDIT.md).
+
+### Features, regimes and target construction
+
+The original design combines technical indicators, volatility, serial dependence and a three-state Gaussian HMM. Trend scanning chooses a forward horizon by maximising a regression t-statistic. These plots document the experiment; the original HMM/label handling had temporal limitations identified in the audit.
+
+![HMM regimes over time](assets/original/cell-17-figure-1.png)
+
+*HMM regimes over time — original saved notebook output.*
+
+![Forward returns by HMM regime](assets/original/cell-19-figure-1.png)
+
+*Forward returns by HMM regime — original saved notebook output.*
+
+![Feature correlations](assets/original/cell-20-figure-1.png)
+
+*Feature correlations — original saved notebook output.*
+
+![Trend-scanning labels and selected horizons](assets/original/cell-23-figure-1.png)
+
+*Trend-scanning labels and selected horizons — original saved notebook output.*
+
+### Feature importance and interpretation
+
+The study compares gain, correlation clustering, permutation importance and SHAP to investigate redundant features and directional bias. These are descriptive diagnostics from the original fitted models.
+
+![Feature importance by gain](assets/original/cell-49-figure-1.png)
+
+*Feature importance by gain — original saved notebook output.*
+
+![Correlation clusters and dendrogram](assets/original/cell-52-figure-1.png)
+
+*Correlation clusters and dendrogram — original saved notebook output.*
+
+![Clustered feature importance](assets/original/cell-53-figure-1.png)
+
+*Clustered feature importance — original saved notebook output.*
+
+![Permutation feature importance](assets/original/cell-55-figure-1.png)
+
+*Permutation feature importance — original saved notebook output.*
+
+![Gain versus permutation importance](assets/original/cell-56-figure-1.png)
+
+*Gain versus permutation importance — original saved notebook output.*
+
+![SHAP summary](assets/original/cell-58-figure-1.png)
+
+*SHAP summary — original saved notebook output.*
+
+### Prediction quality and original backtest
+
+Confusion matrices, ROC/PR curves, signal plots and backtests expose weak generalisation. The original reported strategy lost 68.2% before costs. Those results use a different protocol and interval from the reference evaluations below.
+
+![Confusion matrices](assets/original/cell-62-figure-1.png)
+
+*Confusion matrices — original saved notebook output.*
+
+![ROC and precision-recall curves](assets/original/cell-63-figure-1.png)
+
+*ROC and precision-recall curves — original saved notebook output.*
+
+![Directional signals and prediction probabilities](assets/original/cell-64-figure-1.png)
+
+*Directional signals and prediction probabilities — original saved notebook output.*
+
+![Original equity, drawdown, signals and rolling Sharpe](assets/original/cell-67-figure-1.png)
+
+*Original equity, drawdown, signals and rolling Sharpe — original saved notebook output.*
+
+![Original monthly returns: strategy and buy-and-hold](assets/original/cell-67-figure-2.png)
+
+*Original monthly returns: strategy and buy-and-hold — original saved notebook output.*
 
 ## Reproduce the reference experiment
 
@@ -51,6 +127,22 @@ The account is a hypothetical cash-collateralised long/short research model. Bor
 See `results/RESULTS.md` for all years, models, cost sensitivity and drawdowns. The classifier evaluates 364 scheduled decisions per year; only a subset produce trades. All periods are **retrospective research**: 2021 was already used during the original development, and the entire price history had appeared in the original analysis. None is presented as a pristine prospective holdout.
 
 The baseline drops the HMM, Hurst proxy, fractional-difference level and meta-model until they can justify incremental value. `forward_filter` provides a tested causal HMM state recursion for future controlled work; it is not used to generate the reported baseline results.
+
+## Reference backtests: 2021, 2022 and 2023
+
+These are the later causal reference runs, with separate models and accounting from the original study. Each year starts at equity 1; costs are 7 bps per entry/exit leg. Full tables and cost sensitivity are in [results/RESULTS.md](results/RESULTS.md).
+
+### 2021
+
+![Reference account equity, 2021](results/retrospective_2021/equity.png)
+
+### 2022
+
+![Reference account equity, 2022](results/retrospective_2022/equity.png)
+
+### 2023
+
+![Reference account equity, 2023](results/retrospective_2023/equity.png)
 
 ## Files
 
